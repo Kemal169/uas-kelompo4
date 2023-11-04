@@ -3,3 +3,5 @@ numpy
 pandas
 pydeck
 streamlit
+streamlit_echarts
+streamlit_option_menu
