@@ -8,7 +8,7 @@ from streamlit_echarts import st_pyecharts
 def show_Mpl_s10():
     df = pd.read_csv('MPL_ID_S10.csv')
 
-    menu = st.sidebar.selectbox('Menu', ['Tampilkan Data', 'Tentang'])
+    menu = st.sidebar.selectbox('Menu', ['Tampilkan Data'])
 
     st.sidebar.header("Pilih Hero Terlebih Dahulu MPL ID S10")
 
@@ -44,7 +44,7 @@ def show_Mpl_s10():
                 datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_="inside")],
                 xaxis_opts=opts.AxisOpts(name="Name"),
                 yaxis_opts=opts.AxisOpts(name="Esport Won & Lost"),
-                #toolbox_opts=opts.ToolboxOpts(orient="vertical", pos_left="right")
+                toolbox_opts=opts.ToolboxOpts(orient="vertical", pos_left="right")
             )
         )
         # Menampilkan chart di Streamlit
@@ -111,16 +111,3 @@ def show_Mpl_s10():
         
         # Menampilkan chart di Streamlit
         st_pyecharts(bar_chart1)
-        
-        
-
-    elif menu == 'Tentang':
-        st.write('Berikut adalah data dari MPL ID S10')
-
-        # Widget Hero dengan banned terbanyak
-        most_banned_hero = df[df['Hero_banned'] == df['Hero_banned'].max()]['Hero'].iloc[0]
-        st.write(f'Hero dengan banned terbanyak: {most_banned_hero}')
-        
-        # Widget Hero dengan banned tersedikit
-        least_banned_hero = df[df['Hero_banned'] == df['Hero_banned'].min()]['Hero'].iloc[0]
-        st.write(f'Hero dengan banned tersedikit: {least_banned_hero}')
