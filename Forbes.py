@@ -43,7 +43,8 @@ def show_Forbes():
                 title_opts=opts.TitleOpts(title=chart_title),
                 xaxis_opts=opts.AxisOpts(name=xaxis_name),
                 yaxis_opts=opts.AxisOpts(name="Jumlah Orang Terkaya"),
-                datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_="inside")]
+                datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_="inside")],
+                toolbox_opts=opts.ToolboxOpts(orient="vertical", pos_left="right")
             )
         )
             # Menampilkan chart menggunakan st_pyecharts
@@ -96,6 +97,7 @@ def show_Forbes():
                 title_opts=opts.TitleOpts(title=f"Pendidikan Status ({selected_marital_status})"),
                 xaxis_opts=opts.AxisOpts(name="Pendidikan"),
                 yaxis_opts=opts.AxisOpts(name="Jumlah Orang Terkaya"),
+                toolbox_opts=opts.ToolboxOpts(orient="vertical", pos_left="right")
             )
         )
         # Menampilkan Bar Chart
