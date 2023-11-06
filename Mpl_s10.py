@@ -106,6 +106,7 @@ def show_Mpl_s10():
                 title_opts=opts.TitleOpts(title="Match Esport Heroes"),
                 xaxis_opts=opts.AxisOpts(name="Name"),
                 yaxis_opts=opts.AxisOpts(name="Esport Won & Lost"),
+                toolbox_opts=opts.ToolboxOpts(orient="vertical", pos_left="right")
             )
         )
         
