@@ -56,6 +56,7 @@ def show_mlbb_heroes():
                 datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_="inside")],
                 xaxis_opts=opts.AxisOpts(name="Name"),
                 yaxis_opts=opts.AxisOpts(name="Esport Wins & Loss"),
+                toolbox_opts=opts.ToolboxOpts(orient="vertical", pos_left="right")
             )
         )
 
@@ -93,6 +94,7 @@ def show_mlbb_heroes():
             datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(name="Name"),
             yaxis_opts=opts.AxisOpts(name="column"),
+            toolbox_opts=opts.ToolboxOpts(orient="vertical", pos_left="right")
         )
 
         # Menampilkan grafik
