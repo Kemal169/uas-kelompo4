@@ -50,7 +50,8 @@ def show_shopping():
                 title_opts=opts.TitleOpts(title=chart_title),
                 xaxis_opts=opts.AxisOpts(name=xaxis_name),
                 yaxis_opts=opts.AxisOpts(name="Jumlah"),
-                datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_="inside")]
+                datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_="inside")],
+                toolbox_opts=opts.ToolboxOpts(orient="vertical", pos_left="right")
             )
         )
             
